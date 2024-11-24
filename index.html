@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OX 퀴즈</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+  <div class="quiz-container">
+    <div class="question" id="question">
+      <!-- 문제 텍스트 -->
+    </div>
+    <div class="author" id="author">
+      <!-- 출제자 -->
+    </div>
+    <div class="button-container">
+      <button class="answer-button" id="o-button">
+        <span class="icon">🔵</span> 맞아요
+      </button>
+      <button class="answer-button" id="x-button">
+        <span class="icon">🔴</span> 아니요
+      </button>
+    </div>
+    <button class="next-button" id="next-button">다음 문제</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

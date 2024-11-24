@@ -1,0 +1,120 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.quiz-container {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.question {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.question-prefix {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.answer-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  font-size: 1em;
+  font-weight: bold;
+  background-color: #f3f3f3;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+  color: inherit;
+}
+
+.answer-button .icon {
+  margin-right: 8px;
+  font-size: 1.2em;
+}
+
+#o-button {
+  color: #007bff;
+}
+
+#x-button {
+  color: #ff4d4d;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6; /* 비활성화 느낌을 주기 위한 투명도 */
+}
+
+@keyframes subtleJelly {
+  0% { transform: scale(1, 1); }
+  25% { transform: scale(1.05, 0.95); }
+  50% { transform: scale(0.95, 1.05); }
+  75% { transform: scale(1.02, 0.98); }
+  100% { transform: scale(1, 1); }
+}
+
+.answer-button:active {
+  animation: subtleJelly 0.4s ease;
+}
+
+.answer-button.focused {
+  background-color: #e0e7ff; /* 기존보다 자연스러운 파란 배경 */
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.next-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+  font-weight: bold;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none;
+}
+
+.next-button:hover {
+  background-color: #0056b3;
+}
+
+.author {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 20px;
+  text-align: right;
+}
